@@ -27,8 +27,11 @@
                             <li class="dropdown">
                                 <a href="#" data-toggle="dropdown">Engineering <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#tab4default" data-toggle="tab">Default 4</a></li>
-                                    <li><a href="#tab5default" data-toggle="tab">Default 5</a></li>
+									<li th:each="eng : ${engineering}">
+										<a th:href="@{/(selected=${eng})}"
+										       th:text="${eng}">
+										   </a>
+											</li>         
                                 </ul>
                             </li>
                         </ul>
@@ -38,8 +41,10 @@
                         <div class="tab-pane fade in active" id="tab1default">Isabela</div>
                         <div class="tab-pane fade" id="tab2default">Solis</div>
                         <div class="tab-pane fade" id="tab3default">Sexto</div>
-                        <div class="tab-pane fade" id="tab4default">Default 4</div>
-                        <div class="tab-pane fade" id="tab5default">Default 5</div>
+						<div class="panel-body">
+						    <span th:text="${selected}">No selected</span>
+						</div>
+
                     </div>
                 </div>
             </div>
@@ -62,9 +67,10 @@
                             <li class="dropdown">
                                 <a href="#" data-toggle="dropdown">Degree <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#tab4success" data-toggle="tab">Success 4</a></li>
-                                    <li><a href="#tab5success" data-toggle="tab">Success 5</a></li>
-                                </ul>
+									<li th:each="degree : ${engineering}">
+									<a th:href="@{/(selected=${degree})}"
+							        th:text="${degree}">
+								 </a>
                             </li>
                         </ul>
                 </div>
@@ -73,8 +79,9 @@
                         <div class="tab-pane fade in active" id="tab1success">Astrid</div>
                         <div class="tab-pane fade" id="tab2success">Solis</div>
                         <div class="tab-pane fade" id="tab3success">Finish</div>
-                        <div class="tab-pane fade" id="tab4success">Success 4</div>
-                        <div class="tab-pane fade" id="tab5success">Success 5</div>
+						<div class="panel-body">
+						<span th:text="${selected}">No selected</span>
+						</div>
                     </div>
                 </div>
             </div>
