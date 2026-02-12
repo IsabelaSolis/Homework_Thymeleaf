@@ -28,7 +28,8 @@
                                 <a href="#" data-toggle="dropdown">Engineering <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
 									<li th:each="eng : ${engineering}">
-										<a th:href="@{/(selected=${eng})}"
+										<a th:href="'#' + ${#strings.replace(eng,' ','_')}"
+										       data-toggle="tab"
 										       th:text="${eng}">
 										   </a>
 											</li>         
@@ -41,10 +42,16 @@
                         <div class="tab-pane fade in active" id="tab1default">Isabela</div>
                         <div class="tab-pane fade" id="tab2default">Solis</div>
                         <div class="tab-pane fade" id="tab3default">Sexto</div>
-						<div class="panel-body">
-						    <span th:text="${selected}">No selected</span>
-						</div>
-
+						<div class="tab-pane fade" id="Computer_science">Ingenieria en Computer science</div>
+						<div class="tab-pane fade" id="Mines">Ingenieria en Mines</div>
+						<div class="tab-pane fade" id="Civil">Ingenieria en Civil</div>
+						<div class="tab-pane fade" id="Industrial">Ingenieria en Industrial</div>
+						<div class="tab-pane fade" id="Lawyer">Lawyer</div>
+						<div class="tab-pane fade" id="Design">Design</div>
+						<div class="tab-pane fade" id="Musician">Musician</div>
+						<div class="tab-pane fade" id="Chemistry">Chemistry</div>
+						<div class="tab-pane fade" id="Mechanics">Mechanics</div>
+						<div class="tab-pane fade" id="Nothing">Nothing</div>
                     </div>
                 </div>
             </div>
@@ -68,8 +75,9 @@
                                 <a href="#" data-toggle="dropdown">Degree <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
 									<li th:each="degree : ${engineering}">
-									<a th:href="@{/(selected=${degree})}"
-							        th:text="${degree}">
+									<a th:href="'#' + ${#strings.replace(degree,' ','_')}"
+									data-toggle="tab"
+									th:text="${degree}">
 								 </a>
                             </li>
                         </ul>
@@ -79,8 +87,16 @@
                         <div class="tab-pane fade in active" id="tab1success">Astrid</div>
                         <div class="tab-pane fade" id="tab2success">Solis</div>
                         <div class="tab-pane fade" id="tab3success">Finish</div>
-						<div class="panel-body">
-						<span th:text="${selected}">No selected</span>
+						<div class="tab-pane fade" id="Computer_science">Ingenieria en Computer science</div>
+						<div class="tab-pane fade" id="Mines">Ingenieria en Mines</div>
+						<div class="tab-pane fade" id="Civil">Ingenieria en Civil</div>
+						<div class="tab-pane fade" id="Industrial">Ingenieria en Industrial</div>
+						<div class="tab-pane fade" id="Lawyer">Lawyer</div>
+						<div class="tab-pane fade" id="Design">Design</div>
+						<div class="tab-pane fade" id="Musician">Musician</div>
+						<div class="tab-pane fade" id="Chemistry">Chemistry</div>
+						<div class="tab-pane fade" id="Mechanics">Mechanics</div>
+						<div class="tab-pane fade" id="Nothing">Nothing</div>
 						</div>
                     </div>
                 </div>

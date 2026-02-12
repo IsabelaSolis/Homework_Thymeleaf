@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class Cont {
 	 @GetMapping("/")
 	    public String index(@RequestParam(required = false) String selected,Model model) {
-	        model.addAttribute("Tabla1", true);
+	        model.addAttribute("Tabla1", false);
 	        model.addAttribute("selected", selected);//nos va a ayudar a poner cual escojimos
 	        
 	        List<String> engineering =new ArrayList<>();
